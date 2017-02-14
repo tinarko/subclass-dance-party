@@ -29,7 +29,6 @@ makeBlinkyDancer.prototype.step = function() {
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   
-  console.log('I danced as Blinky!!');
   this.$node.toggle();
 };
 

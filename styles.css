@@ -1,10 +1,15 @@
 body, html{
-  height:100%;
+  height: 100%; 
 }
 body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  
+  background-image: url("dancerPictures/discoBackground.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 1600px 1000px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -21,7 +26,26 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+  position: absolute;
+  content: url("http://officialpsds.com/images/thumbs/Street-Dancer-psd26039.png");
+  height: 100px;
 }
+
+/* ===================
+Dancer images
+=================== */ 
+
+/*.dancerImage {
+  background-size: 100px 20px;
+  background-repeat: no-repeat
+}*/
+
+#breakDancer {
+  content: url("dancerPictures/breakDancer.png");
+}
+#colorDancer {
+
+  content: url("dancerPictures/breakDancer.png");
+
+}
+
