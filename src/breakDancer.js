@@ -28,12 +28,22 @@ makeBreakDancer.prototype.step = function() {
   
   this.oldStep();
 
+  this.timeBetweenSteps = 1;
+
   // this.oldStep();
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
+  if (!this.degree) {
+    this.degree = 1;
+  } else {
+    var value = 'rotate(' + this.degree + 'deg)';
+    this.$node.css('transform', value);
+    this.degree -= 2;
+    console.log('degree: '  + this.degree);
+  }
   
-  // this.$node.toggle();
 };
+
 
 

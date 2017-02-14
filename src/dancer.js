@@ -20,6 +20,7 @@ makeDancer.prototype.step = function() {
   // it just schedules the next step
 
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
+  
 };
   
 makeDancer.prototype.setPosition = function(top, left) {

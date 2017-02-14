@@ -28,8 +28,7 @@ $(document).ready(function() {
       Math.random() * 1000
     );
 
-    console.log($('body').height());
-    console.log($('body').width());
+ 
 
     $('body').append(dancer.$node);
 

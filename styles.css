@@ -95,13 +95,13 @@ Dancer images
 }
 
 #blinky {}
-
+.
 */
 
 
 .breakDancer {
   content: url("dancerPictures/breakDancer.png");
-
+  
 }
 .colorDancer {
   content: url("dancerPictures/colorDancer.png");
