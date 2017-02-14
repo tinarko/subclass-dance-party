@@ -40,7 +40,7 @@ makeBreakDancer.prototype.step = function() {
     var value = 'rotate(' + this.degree + 'deg)';
     this.$node.css('transform', value);
     this.degree -= 2;
-    console.log('degree: '  + this.degree);
+    
   }
   
 };

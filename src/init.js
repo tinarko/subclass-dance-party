@@ -28,9 +28,50 @@ $(document).ready(function() {
       Math.random() * 1000
     );
 
- 
-
+    window.dancers.push(dancer); 
     $('body').append(dancer.$node);
 
   });
+
+  $('.lineUp').on('click', function(event) {
+    var lineTop = 0;
+    var lineLeft = 0;
+
+    //Get the height
+    var oneDancer = window.dancers[0];
+    var height = Number(oneDancer.$node.css('height').slice(0, -2));
+
+    for (var i = 0; i < window.dancers.length; i++) {
+      var currentDancer = window.dancers[i];
+      currentDancer.setPosition(lineTop, lineLeft);
+      lineTop += height;
+    }
+
+  });
+
+  $('.dancer').on('mouseover', function(event) {
+    
+    
+
+  });
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
