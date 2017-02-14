@@ -10,7 +10,9 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   
   // this.oldStep = makeDancer.prototype.step;
 
+  this.setPosition(top, left);
   // return this;
+
 
 };
 
