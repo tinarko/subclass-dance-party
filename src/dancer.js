@@ -35,6 +35,13 @@ makeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-makeDancer.prototype.jumpTogether = function(top, left) {
+makeDancer.prototype.jump = function() {
+  
+  var jumping = function() {
+    this.$node.animate({top: '-=100'}, 200);
+    this.$node.animate({top: '+=100'}, 400);
+  };
 
+  setInterval(jumping.bind(this), 100);
+    
 };

@@ -37,10 +37,11 @@ $(document).ready(function() {
     var lineTop = 0;
     var lineLeft = 0;
 
-    //Get the height
+    //Get the height of one dancer
     var oneDancer = window.dancers[0];
     var height = Number(oneDancer.$node.css('height').slice(0, -2));
 
+    //iterate the height over the other dancers so that the apended dancers appear below the previous dancer
     for (var i = 0; i < window.dancers.length; i++) {
       var currentDancer = window.dancers[i];
       currentDancer.setPosition(lineTop, lineLeft);
@@ -57,9 +58,9 @@ $(document).ready(function() {
 
   $('body').on('click', '.dancer', function(event) {
     // find dancer's location
-    var topCoord = Number(event.target.style['top'].slice(0, -2));
-    var leftCoord = Number(event.target.style['left'].slice(0, -2)); //extra the number value from "100px";
-    var radius = 100;
+    var topCoord = Number((event.target.style['top']).slice(0, -2));
+    var leftCoord = Number((event.target.style['left']).slice(0, -2)); //extra the number value from "100px";
+    var radius = 300;
     var jumpingDancers = [];
 
     var withinRadius = function (dLeft, dTop) {
@@ -71,16 +72,18 @@ $(document).ready(function() {
     };
 
     for (var i = 0; i < window.dancers.length; i++) {
+      // debugger;
       var currentDancer = window.dancers[i];
       
       if (withinRadius(currentDancer.left, currentDancer.top)) {
         // this.jumpTogether();
-        console.log("Adding another dancer");
         jumpingDancers.push(currentDancer);
       }
     }
-    console.log("Number of jumpingdancers: " + jumpingDancers.length);
-    console.log("jumpingDancers = "+ jumpingDancers);
+
+    for (var j = 0; j < jumpingDancers.length; j++) {
+      jumpingDancers[j].jump();
+    }
 
   });
 
