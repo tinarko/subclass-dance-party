@@ -36,5 +36,5 @@ makeDancer.prototype.setPosition = function(top, left) {
 };
 
 makeDancer.prototype.jumpTogether = function(top, left) {
-  
+
 };

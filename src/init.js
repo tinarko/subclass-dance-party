@@ -57,13 +57,13 @@ $(document).ready(function() {
 
   $('body').on('click', '.dancer', function(event) {
     // find dancer's location
-    var top = event.target.style['top'];
-    var left = event.target.style['left'];
-    var radius = 300;
+    var topCoord = Number(event.target.style['top'].slice(0, -2));
+    var leftCoord = Number(event.target.style['left'].slice(0, -2)); //extra the number value from "100px";
+    var radius = 100;
     var jumpingDancers = [];
 
     var withinRadius = function (dLeft, dTop) {
-      var result = Math.sqrt ( Math.pow((dLeft - left), 2) + Math.pow((dTop - top), 2) );
+      var result = Math.sqrt(Math.pow((dLeft - leftCoord), 2) + Math.pow((dTop - topCoord), 2));
       if (result <= radius) {
         return true;
       }
@@ -72,11 +72,14 @@ $(document).ready(function() {
 
     for (var i = 0; i < window.dancers.length; i++) {
       var currentDancer = window.dancers[i];
-      // if (withinRadius(currentDancer.left, currentDancer.top)) {
+      
+      if (withinRadius(currentDancer.left, currentDancer.top)) {
         // this.jumpTogether();
+        console.log("Adding another dancer");
         jumpingDancers.push(currentDancer);
-      // }
+      }
     }
+    console.log("Number of jumpingdancers: " + jumpingDancers.length);
     console.log("jumpingDancers = "+ jumpingDancers);
 
   });
