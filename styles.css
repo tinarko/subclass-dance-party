@@ -81,56 +81,55 @@ body, a:link, a:visited, a:active{
 .dancer{
   position: absolute;
   height: 100px;
-  
   content: url("http://officialpsds.com/images/thumbs/Street-Dancer-psd26039.png");
+}
+.dancer:hover {
+  height: 200px;
 }
 
 /* ===================
-Dancer images
+Break dancer specs
 =================== */ 
-
-/*.dancerImage {
-  background-size: 100px 20px;
-  background-repeat: no-repeat
-}
-
-#blinky {}
-.
-*/
-
 
 .breakDancer {
   content: url("dancerPictures/breakDancer.png");
-  
 }
+
+/* ==============
+Color dancer specs 
+===============*/
+
 .colorDancer {
   content: url("dancerPictures/colorDancer.png");
-
-  
 }
-
-
-
 .grayscale {
   -webkit-filter: grayscale(100%); 
   filter: grayscale(100%);
 }
-
 .contrast {
   -webkit-filter: contrast(160%); 
   filter: contrast(160%);
 }
-.brightness {-webkit-filter: brightness(0.25); filter: brightness(0.25);}
-.blur {-webkit-filter: blur(3px); filter: blur(3px);}
-.invert {-webkit-filter: invert(100%); filter: invert(100%);}
-
+.brightness {
+  -webkit-filter: brightness(0.25); 
+  filter: brightness(0.25);
+}
+.blur {
+  -webkit-filter: blur(3px); 
+  filter: blur(3px);
+}
+.invert {
+  -webkit-filter: invert(100%); 
+  filter: invert(100%);
+}
 .huerotate {
-  -webkit-filter: hue-rotate(180deg); filter: hue-rotate(180deg);}
+  -webkit-filter: hue-rotate(180deg); 
+  filter: hue-rotate(180deg);
+}
 .sepia {
-  -webkit-filter: sepia(100%); filter: sepia(100%);}
-
-
-
+  -webkit-filter: sepia(100%); 
+  filter: sepia(100%);
+}
 
 
 

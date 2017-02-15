@@ -49,9 +49,35 @@ $(document).ready(function() {
 
   });
 
-  $('.dancer').on('mouseover', function(event) {
-    
-    
+  // check to see if click handler is registering to dancer class
+
+  // want ch to load on document
+  // attach clickhandler to dynamically generated 
+  // need to add another perameter 
+
+  $('body').on('click', '.dancer', function(event) {
+    // find dancer's location
+    var top = event.target.style['top'];
+    var left = event.target.style['left'];
+    var radius = 300;
+    var jumpingDancers = [];
+
+    var withinRadius = function (dLeft, dTop) {
+      var result = Math.sqrt ( Math.pow((dLeft - left), 2) + Math.pow((dTop - top), 2) );
+      if (result <= radius) {
+        return true;
+      }
+      return false;
+    };
+
+    for (var i = 0; i < window.dancers.length; i++) {
+      var currentDancer = window.dancers[i];
+      // if (withinRadius(currentDancer.left, currentDancer.top)) {
+        // this.jumpTogether();
+        jumpingDancers.push(currentDancer);
+      // }
+    }
+    console.log("jumpingDancers = "+ jumpingDancers);
 
   });
 
